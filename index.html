@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Search</h1>
+        <input type="text" id="search-input" placeholder="Search for images (e.g., modern tech, nature)..." autocomplete="off">
+        <div class="filters">
+            <button class="filter-btn">Technology</button>
+            <button class="filter-btn">Architecture</button>
+            <button class="filter-btn">Minimalist</button>
+            <button class="filter-btn">Abstract</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="error-message" class="hidden"></div>
+        <div id="image-grid" class="grid"></div>
+        <div class="action-container">
+            <button id="load-more" class="hidden glossy-btn">Load More</button>
+            <div id="loading" class="hidden">Loading...</div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="modal hidden">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-controls">
+            <div id="lightbox-caption"></div>
+            <button id="download-btn" class="glossy-btn download">Download High-Res</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
